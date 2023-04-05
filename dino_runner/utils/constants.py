@@ -72,3 +72,10 @@ BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
+
+FONT_STYLE = "calibri"
+
+COLORS = {
+    "black" : (0, 0, 0),
+    "white" : (255, 255, 255),
+}
