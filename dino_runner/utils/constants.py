@@ -61,7 +61,7 @@ BIRD = [
     pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird2.png")),
 ]
 
-
+SUN = pygame.image.load(os.path.join(IMG_DIR, 'Other/sun.png'))
 ROCK = pygame.image.load(os.path.join(IMG_DIR, 'Other/descarga.png'))
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
 SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
@@ -72,10 +72,12 @@ BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
+SHIELD_TYPE = "shield"
 
-FONT_STYLE = "calibri"
+FONT_STYLE = "gameoverfont"
 
 COLORS = {
     "black" : (0, 0, 0),
     "white" : (255, 255, 255),
+    "aqua" : (255, 255, 0),
 }

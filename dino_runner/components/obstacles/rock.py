@@ -7,4 +7,4 @@ class Rock(Obstacle):
 
     def __init__(self, image_list):
         super().__init__(image_list)
-        self.rect.y = 355
+        self.rect.y = 380

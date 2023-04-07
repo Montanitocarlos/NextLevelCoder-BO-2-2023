@@ -17,11 +17,12 @@ class ObstacleManager:
         for obstacle in self.obstacles:
             obstacle.update(game.game_speed, self.obstacles)
             if game.player.rect.colliderect(obstacle.rect):
-                pygame.time.delay(500)
-                game.playing = False
-                pygame.mixer.music.stop()
-                game.death_count +=1
-                break
+                if not game.player.shield:
+                    pygame.time.delay(500)
+                    pygame.mixer.music.stop()
+                    game.playing = False
+                    game.death_count +=1
+                    break
 
         if len(self.obstacles) == 0:
             self.obstacles.append(Bird(BIRD))
@@ -29,11 +30,13 @@ class ObstacleManager:
         for obstacle in self.obstacles:
             obstacle.update(game.game_speed, self.obstacles)
             if game.player.rect.colliderect(obstacle.rect):
-                pygame.time.delay(500)
-                game.playing = False
-                pygame.mixer.music.stop()
-                game.death_count +=1
-                break
+                if not game.player.shield:
+                    pygame.time.delay(500)
+                    pygame.mixer.music.stop()
+                    game.playing = False
+                    game.death_count +=1
+                    break
+                
 
         if len(self.obstacles) == 0:
             self.obstacles.append(Rock(ROCK))
@@ -41,11 +44,13 @@ class ObstacleManager:
         for obstacle in self.obstacles:
             obstacle.update(game.game_speed, self.obstacles)
             if game.player.rect.colliderect(obstacle.rect):
-                pygame.time.delay(500)
-                game.playing = False
-                pygame.mixer.music.stop()
-                game.death_count +=1
-                break
+                if not game.player.shield:
+                    pygame.time.delay(500)
+                    pygame.mixer.music.stop()
+                    game.playing = False
+                    game.death_count +=1
+                    break
+        
 
     def draw(self, screen):
         for obstacle in self.obstacles:
